@@ -1,0 +1,1 @@
+{"chicken": 2, "carrots": 4, "fish": 1}
