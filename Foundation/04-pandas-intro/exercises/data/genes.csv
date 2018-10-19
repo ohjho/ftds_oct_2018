@@ -1,0 +1,49 @@
+,HUGO Symbol,Locus,Gene product,Associated disease,Notes,Genecard
+1,ABO,,Glycosyl transferases,--,Determinant of blood type (ABO),
+2,ALB,4,Serum albumin,--,The most abundant protein in human blood plasma,GeneCard for ALB
+3,BCL2,18q21.3,Apoptosis regulator Bcl-2 / B-cell CLL/lymphoma 2,Several cancers,The prototype anti-apoptotic protein,GeneCard for BCL2
+4,CCR5,3p21,chemokine (C-C motif) receptor 5,--,Has an important role in resistance to infection.,GeneCard for CCR5
+5,CD4,12pter-p12,CD4 antigen,--,The prototype marker for T helper cells,GeneCard for CD4
+6,CD8,2p12,CD8 antigen,--,The prototype marker for cytotoxic T cells,GeneCard for CD8A
+7,IL2,4q26-q27,Interleukin 2,Various cancers,Strong pro-inflammatory cytokine,GeneCard for IL2
+8,IL10,1q31-q32,Interleukin 10,--,anti-inflammatory cytokine,GeneCard for IL10
+9,BRCA1,17q21,"Breast cancer 1, early onset",Breast cancer,Myriad Genetics owns a controversial patent on this gene [1],GeneCard for BRCA1
+10,BRCA2,13q12-13,"Breast cancer 2, early onset",Breast cancer,Myriad Genetics owns a controversial patent on this gene [2],GeneCard for BRCA2
+11,CD28,2q33,CD28 antigen,--,"The target of the immunomodulatory drug TGN1412, which had a dramatic outcome of its first clinical trial in 2006.",GeneCard for CD28
+12,NPTN,15q22,Neuroplastin,--,"A study found that ""teenagers who had a highly functioning NPTN gene performed better in intelligence tests"".[3][4][5]",GeneCard for NPTN
+13,ZBTB7A,19p13.3,Zbtb7 / POK erythroid myeloid ontogenic factor,Cancer,"Originally called POKemon, the gene was renamed after legal threats from Pokémon USA [6].",GeneCard for ZBTB7A
+14,APC,5q21-q22,Adenomatous polyposis coli protein,Familial adenomatous polyposis,--,GeneCard for APC
+15,ASPM,1q31,Abnormal spindle-like microcephaly-associated protein,Microcephaly,--,GeneCard for ASPM
+16,BDNF,11p13,Brain-derived neurotrophic factor,Congenital central hypoventilation syndrome,--,GeneCard for BDNF
+17,CFTR,7q31.2,Cystic fibrosis transmembrane conductance regulator,Cystic Fibrosis,One of the first genetic diseases for which gene therapy was believed to be achievable. doi:10.1517/17425247.2.2.269 PMID 16296753,GeneCard for CFTR
+18,CREBBP,16p13.3,CREB binding protein,Rubinstein-Taybi syndrome,--,GeneCard for CREBBP
+19,CRH,8q13,Corticotropin releasing hormone,Cushing's syndrome,--,GeneCard for CRH
+20,CXCR4,2q21,Chemokine (C-X-C motif) receptor 4 / fusin,WHIM syndrome,--,GeneCard for CXCR4
+21,DHFR,5q11.2-q13.2,Dihydrofolate reductase,Folate deficiency,--,GeneCard for DHFR
+22,HFE,6p21.3,Hereditary hemochromatosis protein precursor,Haemochromatosis,--,GeneCard for HFE
+23,KRT14,17q12-q21,Keratin,Epidermolysis bullosa,--,GeneCard for KRT14
+24,KRT5,12q13,Keratin,Epidermolysis bullosa,--,GeneCard for KRT5
+25,PGL2,11q13.1,Paraganglioma or familial glomus tumors 2,Paraganglioma,--,GeneCard for PGL2
+26,PHF8,Xp11.22,PHD finger protein 8,Siderius X-linked mental retardation syndrome,Mutations in the histone demethylase PHF8 cause cleft lip and palate and mental retardation. doi:10.1093/hmg/ddp480 PMID 19843542,GeneCard for PHF8
+27,RHO,3q21-q24,Rhodopsin,Retinitis pigmentosa,--,GeneCard for RHO
+28,SDHB,1p36.1-p35,Succinate dehydrogenase complex subunit B,Pheochromocytoma/Paraganglioma,--,GeneCard for SDHB
+29,SDHC,1q21,Succinate dehydrogenase complex subunit C,Pheochromocytoma/Paraganglioma,--,GeneCard for SDHC
+30,SDHD,11q23,Succinate dehydrogenase complex subunit D,Pheochromocytoma/Paraganglioma,--,GeneCard for SDHD
+31,SRY,Yp11.3,Testis determining factor / Sex determining region Y,Swyer syndrome / Gonadal dysgenesis / Hermaphroditism,--,GeneCard for SRY
+32,TSC1,9q34,Hamartin,Tuberous sclerosis,--,GeneCard for TSC1
+33,TSC2,16p13.3,Tuberin,Tuberous sclerosis,--,GeneCard for TSC2
+34,MEFV,16p13.3,Pyrin,Familial Mediterranean Fever,--,GeneCard for MEFV
+35,APP,21q21,Amyloid precursor protein,Alzheimer's Disease,--,GeneCard for APP
+36,GAST,17q21,Gastrin,Zollinger-Ellison syndrome,--,GeneCard for GAST
+37,INS,11p15.5,insulin,Diabetes mellitus,--,
+38,LCK,1p35-p34.3,Leukocyte-specific protein tyrosine kinase,Leukemia,--,GeneCard for LCK
+39,LEP,7q31.3,Leptin,Obesity,--,GeneCard for LEP
+40,LIF,22q12.1-q12.2,Leukemia inhibitory factor,Leukemia,--,GeneCard for LIF
+41,MCM6,2q21,Minichromosome maintenance deficient 6,lactose intolerance,--,GeneCard for MCM6
+42,MYH7,14q12,"Myosin, heavy polypeptide 7, cardiac muscle, beta",Hypertrophic cardiomyopathy,--,GeneCard for MYH7
+43,MYOD1,11p15.4,Myogenic differentiation 1,Rhabdomyosarcoma,--,GeneCard for MYOD1
+44,NPPB,1p36.2,Brain Natriuretic Peptide,Cardiovascular disease,--,GeneCard for NPPB
+45,OSM,22q12.1-q12.2,Oncostatin M,Leukemia,--,GeneCard for OSM
+46,PKC,16p11.2-q12.1,Paroxysmal kinesogenic choreoathetosis,Choreoathetosis,--,GeneCard for PKC
+47,PIP,7q32-q36,Prolactin-induced protein,Fibrocystic breast disease,--,GeneCard for PIP
+48,SLC18A2,10q25,Vesicular Monoamine Transporter,Drug-induced mood disorders,--,GeneCard for SLC18A2
