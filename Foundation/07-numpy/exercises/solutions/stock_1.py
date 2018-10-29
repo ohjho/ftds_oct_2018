@@ -1,0 +1,1 @@
+returns = prices[1:] - prices[:-1]

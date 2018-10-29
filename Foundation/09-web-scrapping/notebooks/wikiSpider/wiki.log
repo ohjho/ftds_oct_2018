@@ -1,0 +1,76 @@
+2018-03-02 17:01:04 [scrapy.core.scraper] ERROR: Spider error processing <GET https://en.wikipedia.org/wiki/Biblioth%C3%A8que_nationale_de_France> (referer: https://en.wikipedia.org/wiki/Python_%28programming_language%29)
+Traceback (most recent call last):
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 76, in _parse_response
+    cb_res = callback(response, **cb_kwargs) or ()
+  File "/home/it-dog/DataScience/WebScrapping/wikiSpider/wikiSpider/spiders/articleSpider.py", line 15, in parse_item
+    title = response.xpath('//h1/text()')[0].extract()
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/parsel/selector.py", line 61, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+IndexError: list index out of range
+2018-03-02 17:01:05 [scrapy.core.scraper] ERROR: Spider error processing <GET https://en.wikipedia.org/wiki/Youm7> (referer: https://en.wikipedia.org/wiki/Ring_(programming_language))
+Traceback (most recent call last):
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 76, in _parse_response
+    cb_res = callback(response, **cb_kwargs) or ()
+  File "/home/it-dog/DataScience/WebScrapping/wikiSpider/wikiSpider/spiders/articleSpider.py", line 15, in parse_item
+    title = response.xpath('//h1/text()')[0].extract()
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/parsel/selector.py", line 61, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+IndexError: list index out of range
+2018-03-02 17:01:06 [scrapy.core.scraper] ERROR: Spider error processing <GET https://en.wikipedia.org/wiki/InfoWorld> (referer: https://en.wikipedia.org/wiki/Cobra_(programming_language))
+Traceback (most recent call last):
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 76, in _parse_response
+    cb_res = callback(response, **cb_kwargs) or ()
+  File "/home/it-dog/DataScience/WebScrapping/wikiSpider/wikiSpider/spiders/articleSpider.py", line 15, in parse_item
+    title = response.xpath('//h1/text()')[0].extract()
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/parsel/selector.py", line 61, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+IndexError: list index out of range
+2018-03-02 17:01:09 [scrapy.core.scraper] ERROR: Spider error processing <GET https://en.wikipedia.org/wiki/The_Economist> (referer: https://en.wikipedia.org/wiki/Open-source)
+Traceback (most recent call last):
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/scrapy/spiders/crawl.py", line 76, in _parse_response
+    cb_res = callback(response, **cb_kwargs) or ()
+  File "/home/it-dog/DataScience/WebScrapping/wikiSpider/wikiSpider/spiders/articleSpider.py", line 15, in parse_item
+    title = response.xpath('//h1/text()')[0].extract()
+  File "/home/it-dog/anaconda3/lib/python3.6/site-packages/parsel/selector.py", line 61, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+IndexError: list index out of range
