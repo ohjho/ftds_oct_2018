@@ -53,7 +53,7 @@ Over the years, [the leaderboard site](https://games.crossfit.com/leaderboard/on
 
 Luckily, Jean-Michel Daignan wrote a [great piece](http://jmdaignan.com/2018/03/30/crossfitopen/) on how to scrape the Crossfit Game website as of 2018 and even made the tool available on [github](https://github.com/jeanmidevacc/crossfit_webscraping). In short, he made use of a hidden API. [Click here](https://ianlondon.github.io/blog/web-scraping-discovering-hidden-apis/) if you wish to learn how to do that with other sites.
 
-[Ray Bell](https://github.com/raybellwaves/cfanalytics) actually did the heavy lifting and made the Crossfit Open 2018 and 2017 dataset available on [Github](https://github.com/raybellwaves/cfanalytics/tree/master/Data). 
+[Ray Bell](https://github.com/raybellwaves/cfanalytics) actually did the heavy lifting and made the Crossfit Open 2018 and 2017 dataset available on [Github](https://github.com/raybellwaves/cfanalytics/tree/master/Data).
 
 ### Side Notes:
 * Sam Swift is the real OG in this and was one of the first to work with [open data](http://swift.pw/crossfit-games-data-2012-2015/)
@@ -96,9 +96,7 @@ l_17url = [
 gyms_url = url_head + 'Affiliate_list.csv'
 ```
 
-<aside class="notice">
-Let's download the data. This might take a while
-</aside>
+**Let's download the data. This might take a while**
 
 
 ```python
@@ -106,13 +104,6 @@ l_d17 = [pd.read_csv(iurl) for iurl in l_17url]
 l_d18 = [pd.read_csv(iurl) for iurl in l_18url]
 dgyms = pd.read_csv(gyms_url)
 ```
-
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/IPython/core/interactiveshell.py:2850: DtypeWarning: Columns (13,20) have mixed types. Specify dtype option on import or set low_memory=False.
-      if self.run_code(code, result):
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/IPython/core/interactiveshell.py:2850: DtypeWarning: Columns (16,18,29) have mixed types. Specify dtype option on import or set low_memory=False.
-      if self.run_code(code, result):
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/IPython/core/interactiveshell.py:2850: DtypeWarning: Columns (24,29) have mixed types. Specify dtype option on import or set low_memory=False.
-      if self.run_code(code, result):
 
 
 ### How many people completed in 2017 and 2018?
@@ -122,8 +113,8 @@ dgyms = pd.read_csv(gyms_url)
 print(f'# of Open Athletes \n2017: {"{:,}".format(len(l_d17[0]) + len(l_d17[1]))} \n2018: {"{:,}".format(len(l_d18[0]) + len(l_d18[1]))}')
 ```
 
-    # of Open Athletes 
-    2017: 273,670 
+    # of Open Athletes
+    2017: 273,670
     2018: 303,956
 
 
@@ -132,8 +123,8 @@ print(f'# of Open Athletes \n2017: {"{:,}".format(len(l_d17[0]) + len(l_d17[1]))
 
 
 ```python
-col_map = {'Userid':'User_id', 
-           'Height (m)': 'Height_(m)', 
+col_map = {'Userid':'User_id',
+           'Height (m)': 'Height_(m)',
            'Weight (kg)':'Weight_(kg)',
            'Regionid':'Region_id',
            'Regionname':'Region_name',
@@ -153,7 +144,7 @@ def JoinAllAthletes( df_ladies, df_men):
     dfm = df_men.loc[:, l_columns].set_index('User_id')
     dfl['Sex'] = 'F'
     dfm['Sex'] = 'M'
-    
+
     return pd.concat([dfl, dfm])
 
 df_18 = JoinAllAthletes( l_d18[0], l_d18[1])
@@ -172,7 +163,7 @@ def GetMissing(in_df):
                      in_df.Affiliate_id == 0,
                      in_df.Region_id.isna(),
                      in_df.Region_id ==0]
-    
+
     dfilter = reduce( lambda x, y : x | y, missing_filter)
     return dfilter
 
@@ -184,7 +175,7 @@ print(f'For 2017: {len(df_17)} total athletes, {len(df17)} athletes have the cru
 ```
 
     For 2018: 303956 total athletes, 287564 athletes have the crucial data. That is 94.61%
-    
+
     For 2017: 273670 total athletes, 261126 athletes have the crucial data. That is 95.42%
 
 
@@ -204,14 +195,6 @@ df18_ = df18[df18.Region_name=='Asia'].groupby('Affiliate_id')['Name'].agg({'Ath
 df17_ = df17[df17.Region_name=='Asia'].groupby('Affiliate_id')['Name'].agg({'Athlete_count': 'count'})
 
 ```
-
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/ipykernel_launcher.py:1: FutureWarning: using a dict on a Series for aggregation
-    is deprecated and will be removed in a future version
-      """Entry point for launching an IPython kernel.
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/ipykernel_launcher.py:2: FutureWarning: using a dict on a Series for aggregation
-    is deprecated and will be removed in a future version
-      
-
 
 * We are going to store the 2017 athletes count number in the 2018 dataframe
 
@@ -779,9 +762,7 @@ df18_.sort_values(by= 'pct_change', ascending=True).head(10).loc[:,l_display_a_c
 Where the improve in preformance is the total number of rank improved for all athletes who completed both in 2017 and 2018.  
 * First lets create another new dataframe with only `Asia` athletes where we also store their 2017 over ranking
 
-<aside class="notice">
-Note that this data frame lookup operation will take a while
-</aside>
+**Note that this data frame lookup operation will take a while**
 
 
 ```python
@@ -808,7 +789,7 @@ print(f'Therefore, only {"{:.2%}".format(1- (sum(df18all.rank17.isna())/ len(df1
 ```
 
     3973 of 7142 athletes are missing 2017 data.
-    
+
     Therefore, only 44.37% are repeat athletes.
 
 
@@ -829,39 +810,10 @@ print(f'that is a {"{:.2%}".format(imp_mean/len(df18))} improvement over the ent
 print(f'with a standard deviation of {"{:,.0f}".format(imp_std)} ranks\n')
 ```
 
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/ipykernel_launcher.py:3: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      This is separate from the ipykernel package so we can avoid doing imports until
-
-
     Average improvement is 2,956 ranks
-    that is a 1.03% improvement over the entire population! 
-    
+    that is a 1.03% improvement over the entire population!
+
     with a standard deviation of 38,443 ranks
-    
-
-
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/ipykernel_launcher.py:4: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      after removing the cwd from sys.path.
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/ipykernel_launcher.py:7: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      import sys
 
 
 #### This means that on average, repeat athletes in `Asia` improve their global ranking by nearly 3,000 spots! The prize of consistency!
@@ -874,19 +826,6 @@ plt.figure(figsize=(20,10))
 sns.set(font_scale = 1.5, context = 'notebook')
 sns.distplot(df18a.imp_z)
 ```
-
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
-      return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/matplotlib/axes/_axes.py:6462: UserWarning: The 'normed' kwarg is deprecated, and has been replaced by the 'density' kwarg.
-      warnings.warn("The 'normed' kwarg is deprecated, and has been "
-
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1138d16a0>
-
-
 
 
 ![png](cf18_which_gym_to_join_files/cf18_which_gym_to_join_40_2.png)
@@ -901,13 +840,6 @@ Ranking improvement, quite normally distributed!
 l_display_a_col = ['Name','Age','Affiliate_name','Country','rank18', 'rank17','improvement', 'imp_z']
 df18a.sort_values(by ='improvement', ascending = False)[df18a.Sex=='M'].head(10).loc[:,l_display_a_col]
 ```
-
-    /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/ipykernel_launcher.py:2: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
-      
-
-
-
-
 
 <div>
 <style scoped>
@@ -1077,8 +1009,8 @@ df18a.sort_values(by ='improvement', ascending = False)[df18a.Sex=='M'].head(10)
 
 
 ```python
-df18ag = df18a.groupby('Affiliate_id')['improvement'].agg({'athletes_count': 'count', 
-                                                           'Total_rank_improved': 'sum', 
+df18ag = df18a.groupby('Affiliate_id')['improvement'].agg({'athletes_count': 'count',
+                                                           'Total_rank_improved': 'sum',
                                                            'Avg_rank_improved': 'mean',
                                                            'Median_rank_improved': 'median'})
 df18ag['Affiliate_name'] = df18ag.index.map(lambda x: GetAffiliateDet(x, 'Affiliate_name'))
@@ -1363,20 +1295,12 @@ df18ag[df18ag.Country == 'Hong Kong'].sort_values( by = 'Total_rank_improved', a
 ```python
 plt.figure(figsize=(15,10))
 sns.set(font_scale = 1.5, context = 'talk')
-g = sns.boxplot( data = df18a[ df18a.Country == 'Hong Kong'], 
+g = sns.boxplot( data = df18a[ df18a.Country == 'Hong Kong'],
             x = 'Affiliate_name', y = 'imp_z')
 g.set_xticklabels(g.get_xticklabels(), rotation=45)
 mean_z = df18a.imp_z.mean()
 g.hlines(mean_z, g.get_xlim()[0], g.get_xlim()[1], color = 'r')
 ```
-
-
-
-
-    <matplotlib.collections.LineCollection at 0x113da27f0>
-
-
-
 
 ![png](cf18_which_gym_to_join_files/cf18_which_gym_to_join_51_1.png)
 
@@ -1387,7 +1311,7 @@ g.hlines(mean_z, g.get_xlim()[0], g.get_xlim()[1], color = 'r')
 ```python
 plt.figure(figsize=(15,10))
 sns.set(font_scale = 1, context = 'talk')
-g = sns.violinplot( data = df18a[ df18a.Country == 'Hong Kong'], 
+g = sns.violinplot( data = df18a[ df18a.Country == 'Hong Kong'],
             x = 'Affiliate_name', y = 'imp_z', hue = 'Sex', split=True,
             palette = ['r','b'])
 g.set_xticklabels(g.get_xticklabels(), rotation=90)
@@ -1397,15 +1321,6 @@ g.hlines(mean_z, g.get_xlim()[0], g.get_xlim()[1], color = 'r')
 
     /Users/JHO/.virtualenvs/accelerateHK3/lib/python3.6/site-packages/scipy/stats/stats.py:1706: FutureWarning: Using a non-tuple sequence for multidimensional indexing is deprecated; use `arr[tuple(seq)]` instead of `arr[seq]`. In the future this will be interpreted as an array index, `arr[np.array(seq)]`, which will result either in an error or a different result.
       return np.add.reduce(sorted[indexer] * weights, axis=axis) / sumval
-
-
-
-
-
-    <matplotlib.collections.LineCollection at 0x11464edd8>
-
-
-
 
 ![png](cf18_which_gym_to_join_files/cf18_which_gym_to_join_53_2.png)
 
@@ -1540,19 +1455,11 @@ df18s[df18s.Country == 'Hong Kong'].sort_values( by = 'survival_rate', ascending
 ```python
 plt.figure(figsize=(15,10))
 sns.set(font_scale = 1.5, context = 'talk')
-g = sns.barplot( data = df18s[ df18s.Country == 'Hong Kong'], 
+g = sns.barplot( data = df18s[ df18s.Country == 'Hong Kong'],
             x = 'Affiliate_name', y = 'survival_rate')
 g.set_xticklabels(g.get_xticklabels(), rotation=45)
 g.set_title('Open Athlete Survival Rate')
 ```
-
-
-
-
-    Text(0.5,1,'Open Athlete Survival Rate')
-
-
-
 
 ![png](cf18_which_gym_to_join_files/cf18_which_gym_to_join_56_1.png)
 
