@@ -1,13 +1,16 @@
 ---?image=https://source.unsplash.com/c4XoMGxfsVU/
-###Using Machine Learning to Predict Hong Kong Property Prices
+### Using Machine Learning to Predict Hong Kong Property Prices
 +++
 ## 1. The question
-@size[xx-large](How much is where I am worth right now?)
-@size[xx-large](Is the price advertised on ad fair??)
-@size[xx-large](If I want to live in [X] neigborhood with [Y] square-foot worth of space in a [Z]-year-old building. How much money do I need???)
+* How much is where I am worth right now?  
+* Is the price advertised on ad fair??
+* If I want to live in [X] neigborhood with [Y] square-foot worth of space in a [Z]-year-old building. How much money do I need???
 +++
 #### A Supervised Regression Machine Learning Problem
+@snap[west]
 * Target provided in Training
+@snapend
+
 * Target value is continuous, not discrete
 ---
 @title[Data Science Workflow]
@@ -50,6 +53,8 @@ The eight-fold path!
 ### The baseline
 * Baseline predict = historical average
 * Baseline errors = historical average error
++++
+### Conclusion
 
 ---
 ## 8. Further Questions to Answer
