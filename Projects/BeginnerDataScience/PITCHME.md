@@ -7,11 +7,10 @@
 * If I want to live in [X] neigborhood with [Y] square-foot worth of space in a [Z]-year-old building. How much money do I need???
 +++
 #### A Supervised Regression Machine Learning Problem
-@snap[west]
+@ul
 * Target provided in Training
-@snapend
-
 * Target value is continuous, not discrete
+@ulend
 ---
 @title[Data Science Workflow]
 #### Data Scince Workflow
