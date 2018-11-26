@@ -1,5 +1,5 @@
 ---?image=https://source.unsplash.com/c4XoMGxfsVU/
-@size[medium](Using Machine Learning to Predict Hong Kong Property Prices)
+@size[x-large](Using Machine Learning to Predict Hong Kong Property Prices)
 ---
 @title[Data Science Workflow]
 #### Data Scince Workflow
