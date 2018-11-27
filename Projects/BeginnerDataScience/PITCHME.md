@@ -72,7 +72,7 @@ The eight-fold path!
 * Using the CCI to 'normalize' prices
 @ulend
 ---?image=https://source.unsplash.com/KkYWWpurqbE/
-## 5. Training the Model
+## 5. @color[white](Training the Model)
 +++
 ### Target Dist
 ![target dist](Projects/BeginnerDataScience/pitch/5-targetdist.png)
