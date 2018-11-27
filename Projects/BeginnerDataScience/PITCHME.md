@@ -95,7 +95,7 @@ The eight-fold path!
 ![single full decision tree in forest](Projects/BeginnerDataScience/pitch/6-small_tree.png)
 ---
 ## 7. Deploy & Perform
-+++?code=Projects/BeginnerDataScience/predict_hk_prop.py&lang=python&title=deploy_code
++++?code=Projects/BeginnerDataScience/predict_hk_prop.py&lang=python&title=The Deployed Model Code
 +++
 ### @color[grey](The baseline)
 * Baseline predict = historical average
@@ -106,3 +106,16 @@ The eight-fold path!
 ---
 ## 8. Further Questions to Answer
 +++
+### To be continued
+@ul
+* model for large flats
+* model for dettached, bespoke, luxury homes
+* model for rent???
+* expanding the data set in time to improve the model?
+* analyze time series to identify trends in neigborhood
+  * Classification problem?
+* combine with other data size:
+  * Population
+  * Crime Rate
+  * Starbucks Store Locations
+@ulend
