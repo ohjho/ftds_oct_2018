@@ -20,7 +20,7 @@ The eight-fold path!
 ## 2. Getting the data
 +++
 ### Centaline Data
-![centaline](pitch/2-centadata)
+![centaline](pitch/2-centadata.png)
 ---
 ## 3. Exploratory Data Analysis
 +++
