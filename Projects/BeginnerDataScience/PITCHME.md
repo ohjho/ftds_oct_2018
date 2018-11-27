@@ -63,13 +63,13 @@ The eight-fold path!
 * one-hot encoding the region
 * convert price to price per SqFt
 * categorize flat types
-@endul
+@ulend
 +++
 ### Applying some Domain Knowledge
 @ul
 * Small-Medium vs Large Flats: 1076 SqFt
 * Using the CCI to 'normalize' prices
-@endul
+@ulend
 ---
 ## 5. Training the Model
 +++
@@ -95,6 +95,7 @@ The eight-fold path!
 ![single full decision tree in forest](Projects/BeginnerDataScience/pitch/6-small_tree.png)
 ---
 ## 7. Deploy & Perform
++++?code=Projects/BeginnerDataScience/predict_hk_prop.py&lang=python&title=deploy_code
 +++
 ### @color[grey](The baseline)
 * Baseline predict = historical average
