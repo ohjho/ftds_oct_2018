@@ -19,3 +19,5 @@
 * Image Recognition:
   * CNN + ANN
   * layers -> pooling -> flattening -> neural network [[visualized](http://www.scs.ryerson.ca/~aharley/vis/conv/flat.html)]
+### Tools
+* [keras]() with [tensorflow blackend]()
